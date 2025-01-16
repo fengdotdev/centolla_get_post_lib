@@ -8,7 +8,7 @@ license = "MIT OR Apache-2.0"
 repository = "https://github.com/fengdotdev/centolla_get_post_lib"  
 readme = "README.md"          
 keywords = ["centolla"]  
-categories = ["api-mock"]  
+categories = ["api-bindings"]  
 
 
 [dependencies]
