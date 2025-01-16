@@ -75,19 +75,19 @@ impl GetPostObjC {
     }
 }
 
-// Implementación de funciones compatibles con C
-#[no_mangle]
-pub extern "C" fn get_post_obj_new(rust_obj: *mut dyn GetPostRustObjInterface) -> *mut GetPostObjC {
-    let rust_obj = unsafe { Box::from_raw(rust_obj) };
-    let wrapper = GetPostObjC::new(rust_obj);
-    Box::into_raw(Box::new(wrapper))
-}
+// // Implementación de funciones compatibles con C
+// #[no_mangle]
+// pub extern "C" fn get_post_obj_new(rust_obj: *mut dyn GetPostRustObjInterface) -> *mut GetPostObjC {
+//     let rust_obj = unsafe { Box::from_raw(rust_obj) };
+//     let wrapper = GetPostObjC::new(rust_obj);
+//     Box::into_raw(Box::new(wrapper))
+// }
 
 #[no_mangle]
 pub extern "C" fn get_post_obj_free(obj: *mut GetPostObjC) {
     if !obj.is_null() {
         unsafe {
-            Box::from_raw(obj);
+            drop(Box::from_raw(obj));
         }
     }
 }
