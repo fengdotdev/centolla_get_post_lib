@@ -1,0 +1,20 @@
+[package]
+name = "centolla_get_post_lib"
+version = "0.1.0"
+edition = "2021"
+authors = ["FengDotDev <feng.dev>"]
+description = "library abstracting the get and post requests for centolla"
+license = "MIT OR Apache-2.0"  # Especifica una licencia válida (o la que uses)
+repository = "https://github.com/tu_usuario/tu_repo"  # (Opcional) URL del repositorio
+readme = "README.md"          # Archivo README para la documentación
+keywords = ["keyword1", "keyword2"]  # Palabras clave para la búsqueda
+categories = ["category1", "category2"]  # Categorías de crates.io
+
+
+
+
+
+[dependencies]
+
+[lib]
+crate-type = ["cdylib"]  
